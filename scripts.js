@@ -79,3 +79,15 @@ window.addEventListener("click", () => {
     const musica = document.getElementById("musica");
     if (musica) musica.play();
 });
+
+// ❤️ Corazones flotando en el fondo
+function corazonesFlotando() {
+    const corazon = document.createElement("div");
+    corazon.textContent = "❤️";
+    corazon.className = "corazon";
+    corazon.style.left = Math.random() * window.innerWidth + "px";
+    corazon.style.top = "0px";
+    document.body.appendChild(corazon);
+    setTimeout(() => corazon.remove(), 5000);
+}
+setInterval(corazonesFlotando, 1000);
